@@ -76,7 +76,7 @@ function createApp(database) {
   }
 
   function isMonday(date) {
-    return date.toTemporalInstant().toZonedDateTimeISO("UTC").dayOfWeek === 1; //date.getDay() === 1;
+    return date.toTemporalInstant().toZonedDateTimeISO("UTC").dayOfWeek === 1;
   }
 
   function isHoliday(date) {
