@@ -90,7 +90,7 @@ function createApp(database) {
         date &&
         dateNew &&
         dateNew.year === holiday2.year &&
-        date.toTemporalInstant().toZonedDateTimeISO("UTC").month === holiday2.month &&
+        dateNew.month === holiday2.month &&
         date.toTemporalInstant().toZonedDateTimeISO("UTC").day === holiday2.day
       ) {
         return true;
