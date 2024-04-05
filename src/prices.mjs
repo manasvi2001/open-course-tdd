@@ -90,6 +90,7 @@ function createApp(database) {
       if (
         date &&
         holiday &&
+        // prettier-ignore
         date.year === holiday.year &&
         date.month === holiday.month &&
         dateNew.day === holiday.day
