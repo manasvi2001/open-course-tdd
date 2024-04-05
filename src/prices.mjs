@@ -70,14 +70,14 @@ function createApp(database) {
 
   function calculateReduction(date, date2) {
     let reduction = 0;
-    if (date2 && isMonday(date2) && !isHoliday(date2)) {
+    if (date2 && isMonday(date, date2) && !isHoliday(date2)) {
       reduction = 35;
     }
     return reduction;
   }
 
   function isMonday(date, date2) {
-    return date.toTemporalInstant().toZonedDateTimeISO("UTC").dayOfWeek === 1;
+    return date2.toTemporalInstant().toZonedDateTimeISO("UTC").dayOfWeek === 1;
   }
 
   function isHoliday(date) {
