@@ -90,7 +90,6 @@ function createApp(database) {
       if (
         dateNew &&
         holiday &&
-        holiday2 &&
         dateNew.year === holiday.year &&
         dateNew.month === holiday.month &&
         dateNew.day === holiday.day
