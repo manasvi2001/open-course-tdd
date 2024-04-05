@@ -87,8 +87,7 @@ function createApp(database) {
       let holiday2 = Temporal.PlainDate.from(row.holiday);
       if (
         date &&
-        date.toTemporalInstant().toZonedDateTimeISO("UTC").year ===
-          holiday.toTemporalInstant().toZonedDateTimeISO("UTC").year &&
+        date.toTemporalInstant().toZonedDateTimeISO("UTC").year === holiday2.year &&
         date.toTemporalInstant().toZonedDateTimeISO("UTC").month ===
           holiday.toTemporalInstant().toZonedDateTimeISO("UTC").month &&
         date.toTemporalInstant().toZonedDateTimeISO("UTC").day ===
