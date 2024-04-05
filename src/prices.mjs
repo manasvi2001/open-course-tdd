@@ -1,3 +1,4 @@
+import { Temporal } from "@js-temporal/polyfill";
 import "./polyfills";
 import express from "express";
 
@@ -83,6 +84,7 @@ function createApp(database) {
     const holidays = database.getHolidays();
     for (let row of holidays) {
       let holiday = new Date(row.holiday);
+      let holiday2 = Temporal.PlainDate.from(row.holiday);
       if (
         date &&
         date.toTemporalInstant().toZonedDateTimeISO("UTC").year ===
